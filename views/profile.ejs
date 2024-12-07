@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BukuKu - Profile</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style/profile.css" />
+  </head>
+  <body>
+    <div class="side-bar">
+      <a class="back-button" href="/home/<%= user.id_user %>"
+        ><span>&lt;</span> Kembali</a
+      >
+      <a
+        class="side-bar-list side-bar-selected"
+        href="/profile/<%= user.id_user %>"
+        >Profile</a
+      >
+      <a class="side-bar-list" href="/dashboard/<%= user.id_user %>">Dashboard</a>
+      <a class="side-bar-list" href="/now-reading/<%= user.id_user %>"
+        >Bacaan</a
+      >
+      <a class="side-bar-list" href="/book/<%= user.id_user %>">Buku</a>
+      <a class="side-bar-list" href="/categories/<%= user.id_user %>"
+        >Kategori</a
+      >
+      <a class="side-bar-list" href="/logout">Logout</a>
+    </div>
+
+    <div class="user-container">
+      <form
+        class="edit-profile-container"
+        action="/edit-profile/<%= user.id_user %>"
+        method="POST"
+      >
+        <a class="profile-back-button" href="/home/<%= user.id_user %>">Kembali</a>
+        <h1>Edit Profile</h1>
+        <div class="edit-profile-header">
+          <div class="user-profile-icon"></div>
+          <h3><%= user.username %></h3>
+        </div>
+        <div class="edit-profile-field-container">
+          <div class="edit-profile-field-left">
+            <div class="edit-profile-field">
+              <label for="username">Username</label>
+              <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="Username"
+                autocomplete="off"
+                required
+                value="<%= user.username %>"
+              />
+            </div>
+            <div class="edit-profile-field">
+              <label for="oldPassword">Password Lama</label>
+              <input
+                id="oldPassword"
+                name="oldPassword"
+                type="password"
+                placeholder="Password Lama"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <div class="edit-profile-field-right">
+            <div class="edit-profile-field">
+              <label for="newPassword">Password Terbaru</label>
+              <input
+                id="newPassword"
+                name="newPassword"
+                type="password"
+                placeholder="Password Terbaru"
+                autocomplete="off"
+              />
+            </div>
+            <div class="edit-profile-field">
+              <label for="passwordConfirm">Konfirmasi Password</label>
+              <input
+                id="passwordConfirm"
+                name="passwordConfirm"
+                type="password"
+                placeholder="Konfirmasi Password"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="edit-profile-field-container">
+          <div class="edit-profile-field-left">
+            <button class="edit-profile-submit" type="submit">Update</button>
+          </div>
+          <div class="edit-profile-field-right">
+            <% if (message) { %>
+              <% if(message === "Update Berhasil !") { %>
+              <div class="alert-profile succes"><%= message %></div>
+                <% } else { %>
+              <div class="alert-profile"><%= message %></div>
+                <% } %>
+              <% } %>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

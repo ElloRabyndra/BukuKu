@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BukuKu - Dashboard</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style/dashboard.css" />
+  </head>
+  <body>
+    <div class="side-bar">
+      <a class="back-button" href="/home/<%= userId %>"
+        ><span>&lt;</span> Kembali</a
+      >
+      <a class="side-bar-list" href="/profile/<%= userId %>">Profile</a>
+      <a class="side-bar-list side-bar-selected" href="/dashboard/<%= userId %>"
+        >Dashboard</a
+      >
+      <a class="side-bar-list" href="/now-reading/<%= userId %>">Bacaan</a>
+      <a class="side-bar-list" href="/book/<%= userId %>">Buku</a>
+      <a class="side-bar-list" href="/categories/<%= userId %>">Kategori</a>
+      <a class="side-bar-list" href="/logout">Logout</a>
+    </div>
+
+    <div class="user-container">
+      <div class="dashboard-container">
+        <a class="profile-back-button" href="/home/<%= userId %>">Kembali</a>
+        <h1>Dashboard</h1>
+        <div class="dashboard-stats">
+          <div class="dashboard-card">
+            <h3>Belum Dibaca</h3>
+            <p class="dashboard-number"><%= dashboard.buku_belum_dibaca %></p>
+          </div>
+          <div class="dashboard-card">
+            <h3>Sedang Dibaca</h3>
+            <p class="dashboard-number"><%= dashboard.buku_sedang_dibaca %></p>
+          </div>
+          <div class="dashboard-card">
+            <h3>Selesai Dibaca</h3>
+            <p class="dashboard-number"><%= dashboard.buku_selesai_dibaca %></p>
+          </div>
+          <div class="dashboard-card">
+            <h3>Total Buku</h3>
+            <p class="dashboard-number"><%= dashboard.total_buku %></p>
+          </div>
+          <div class="dashboard-card">
+            <h3>Total Kategori</h3>
+            <p class="dashboard-number"><%= dashboard.total_kategori %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

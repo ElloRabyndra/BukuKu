@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BukuKu - Bacaan</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style/nowReading.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="/home/<%= userId %> %>" class="bukuku-font"></a>
+        <ul>
+          <li><a href="/now-reading/<%= userId %>">Bacaan</a></li>
+          <li><a href="/book/<%= userId %>">Buku</a></li>
+          <li><a href="/categories/<%= userId %>">Kategori</a></li>
+        </ul>
+      </div>
+      <a class="user-profile-icon desktop" href="/profile/<%= userId %>"></a>
+      <a class="user-profile-icon mobile" href="/navbar/<%= userId %>"></a>
+    </nav>
+    <div class="bacaan">
+      <div class="table">
+        <div class="table-main">
+          <div href="updateStatus.html" class="table-row">
+            <div class="table-column">Judul</div>
+            <div class="table-column">Kategori</div>
+            <div class="table-column">Status</div>
+          </div>
+          <% if(books.length==0) { %>
+          <!-- Data Kosong -->
+          <div class="empty-data">
+            <p>Belum Ada Buku Yang Ditambahkan</p>
+          </div>
+          <% } else { %>
+          <!-- Ada Data -->
+          <% books.forEach(book => { %>
+          <a
+            href="/update-status-page/<%= userId %>/<%= book.id_book %>"
+            class="table-row"
+          >
+            <div class="table-column"><%= book.tittle %></div>
+            <div class="table-column">
+              <% if(book.name == null) { %> None <% } else { %> <%= book.name %>
+              <% } %>
+            </div>
+            <div class="table-column status"><%= book.status %></div>
+          </a>
+          <% }); %> <% } %>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

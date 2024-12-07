@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BukuKu - Update Buku</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style/books.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="/home/<%= userId %> %>" class="bukuku-font"></a>
+        <ul>
+          <li><a href="/now-reading/<%= userId %>">Bacaan</a></li>
+          <li><a href="/book/<%= userId %>">Buku</a></li>
+          <li><a href="/categories/<%= userId %>">Kategori</a></li>
+        </ul>
+      </div>
+      <a class="user-profile-icon desktop" href="/profile/<%= userId %>"></a>
+      <a class="user-profile-icon mobile" href="/navbar/<%= userId %>"></a>
+    </nav>
+    <div class="add-book">
+      <div class="add-book-container">
+        <div class="add-book-header">Update Buku</div>
+        <form class="add-book-main" action="/Update-book/submit/<%= userId %>/<%= book.id_book %>" encType="multipart/form-data" method="POST">
+          <div class="add-cover-container">
+            <% if(book.cover_book == null) { %>
+              <!-- Tidak Ada Cover -->
+              <div class="book-content">
+                <label class="book-cover" for="input-cover">
+                  <div class="bukuku-logo"></div>
+                </label>
+                <input id="input-cover" name="cover" type="file" accept="image/*" />
+                <div class="book-tittle">Cover Buku</div>
+              </div>
+              <% } else { %>
+                <!-- Ada Cover Book -->
+                <div class="book-content">
+                  <label class="book-cover withCover <%= book.cover_book %>" for="input-cover"></label>
+                  <input id="input-cover" name="cover" type="file" accept="image/*" />
+                  <div class="book-tittle"><%= book.tittle %></div>
+                </div>
+                <% } %>
+          </div>
+          <div class="add-book-data">
+            <div class="add-book-data-container">
+              <label for="tittle">Judul:</label
+              ><input
+                required
+                name="tittle"
+                id="tittle"
+                type="text"
+                autocomplete="off"
+                value="<%= book.tittle %>"
+              />
+            </div>
+            <div class="add-book-data-container">
+              <label for="author">Penulis:</label
+              ><input
+                required
+                name="author"
+                id="author"
+                type="text"
+                autocomplete="off"
+                value="<%= book.author %>"
+              />
+            </div>
+            <div class="add-book-data-container">
+              <label for="publisher">Penerbit:</label
+              ><input required id="publisher" name="publisher" type="text" autocomplete="off" value="<%= book.publisher %>"/>
+            </div>
+            <div class="add-book-data-container">
+              <label for="categories">Kategori:</label>
+              <select name="categories" id="categories">
+                <% categories.forEach(category => { %>
+                <option value="<%= category.name %>" <% if(book.id_categories!=null && book.id_categories==category.id_categories) { %> selected <% } %>"><%= category.name %></option>
+                <% }); %>
+              </select>
+            </div>
+            <button type="submit">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

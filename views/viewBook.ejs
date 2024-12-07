@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BukuKu</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style/books.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="/home/<%= userId %> %>" class="bukuku-font"></a>
+        <ul>
+          <li><a href="/now-reading/<%= userId %>">Bacaan</a></li>
+          <li><a href="/book/<%= userId %>">Buku</a></li>
+          <li><a href="/categories/<%= userId %>">Kategori</a></li>
+        </ul>
+      </div>
+      <a class="user-profile-icon desktop" href="/profile/<%= userId %>"></a>
+      <a class="user-profile-icon mobile" href="/navbar/<%= userId %>"></a>
+    </nav>
+    <div class="view-book">
+      <div class="view-book-container">
+        <div class="view-book-header">Detail Buku</div>
+        <div class="view-book-main">
+          <div class="view-cover-container">
+            <% if(book.cover_book == null) { %>
+            <!-- Tidak Ada Cover -->
+            <div class="book-content">
+              <div class="book-cover">
+                <div class="bukuku-logo"></div>
+              </div>
+            </div>
+            <% } else { %>
+            <!-- Ada Cover Book -->
+            <div class="book-content">
+              <div
+                class="book-cover withCover <%= book.cover_book %>"
+              ></div>
+            </div>
+            <% } %>
+          </div>
+          <div class="view-book-data">
+            <div class="view-book-data-tittle">Judul:</div>
+            <div class="view-book-data-field"><%= book.tittle %></div>
+            <div class="view-book-data-tittle">Penulis:</div>
+            <div class="view-book-data-field"><%= book.author %></div>
+            <div class="view-book-data-tittle">Penerbit:</div>
+            <div class="view-book-data-field"><%= book.publisher %></div>
+            <div class="view-book-data-tittle">Kategori:</div>
+            <div class="view-book-data-field"><% if(book.name==null) { %> None <% } else { %> <%= book.name %> <% } %></div>
+          </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BukuKu - Home</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style/home.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="/home/<%= user.id_user %> %>" class="bukuku-font"></a>
+        <ul>
+          <li><a href="/now-reading/<%= user.id_user %>">Bacaan</a></li>
+          <li><a href="/book/<%= user.id_user %>">Buku</a></li>
+          <li><a href="/categories/<%= user.id_user %>">Kategori</a></li>
+        </ul>
+      </div>
+      <a class="user-profile-icon desktop" href="/profile/<%= user.id_user %>"></a>
+      <a class="user-profile-icon mobile" href="/navbar/<%= user.id_user %>"></a>
+    </nav>
+    <div class="home">
+      <div class="bukuku-logo-home"></div>
+      <div class="bukuku-username">
+        <h1>Selamat Datang</h1>
+        <h1><%= user.username %></h1>
+      </div>
+    </div>
+  </body>
+</html>

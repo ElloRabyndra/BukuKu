@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BukuKu - Update Status</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style/nowReading.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="/home/<%= userId %> %>" class="bukuku-font"></a>
+        <ul>
+          <li><a href="/now-reading/<%= userId %>">Bacaan</a></li>
+          <li><a href="/book/<%= userId %>">Buku</a></li>
+          <li><a href="/categories/<%= userId %>">Kategori</a></li>
+        </ul>
+      </div>
+      <a class="user-profile-icon desktop" href="/profile/<%= userId %>"></a>
+      <a class="user-profile-icon mobile" href="/navbar/<%= userId %>"></a>
+    </nav>
+    <div class="update-status">
+      <div class="update-bacaan-container">
+        <% if(book.cover_book == null) { %>
+          <!-- Tidak Ada Cover -->
+          <div class="book-content">
+            <div class="book-cover">
+              <div class="bukuku-logo"></div>
+            </div>
+            <div class="book-tittle"><%= book.tittle %></div>
+          </div>
+          <% } else { %>
+            <!-- Ada Cover Book -->
+            <div class="book-content">
+              <div class="book-cover withCover <%= book.cover_book %>"></div>
+              <div class="book-tittle"><%= book.tittle %></div>
+            </div>
+        <% } %>
+
+        <form class="update-content-form" action="/update-status/submit/<%= userId %>/<%= book.id_book %>" method="POST">
+          <div class="status-container">
+            <label for="status">Status: </label>
+            <select name="status" id="status">
+              <option <% if("Belum Dibaca" == book.status) { %> selected <% } %>
+               value="Belum Dibaca">Belum Dibaca</option>
+              <option <% if("Sedang Dibaca" == book.status) { %> selected <% } %>
+               value="Sedang Dibaca">Sedang Dibaca</option>
+              <option <% if("Selesai Dibaca" == book.status) { %> selected <% } %>
+               value="Selesai Dibaca">Selesai Dibaca</option>
+            </select>
+          </div>
+          <div class="date-container">
+            <div class="start-date">
+              <label for="startDate">Tanggal Mulai: </label><input id="startDate" name="startDate" type="date" value="<%= startDate %>">
+            </div>
+            <div class="end-date">
+              <label for="endDate">Tanggal Selesai: </label><input id="endDate" name="endDate" type="date" value="<%= endDate %>">
+            </div>
+          </div>
+          <div class="notes-container">
+            <label for="notes">Notes:</label>
+            <textarea name="notes" id="notes" placeholder="Masukkan Catatanmu"><%= book.notes %></textarea>
+          </div>
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

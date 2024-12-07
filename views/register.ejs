@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BukuKu - Register</title>
+  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/style/register.css">
+</head>
+<body>
+  <div class="register-container">
+    <div class="register-tittle-container">
+      <div class="bukuku-logo"></div>
+      <h1>Buat Akun Untuk Lacak Bacaanmu!</h1>
+      <p>Temukan kembali buku-buku dan catatan bacaanmu bersama Bukuku.</p>
+    </div>
+    <form class="register-form" action="/register/submit" method="POST">
+      <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input pattern="^[a-zA-Z0-9]+$" type="password" name="passwordConfirm" placeholder="Konfirmasi Password" required>
+      <% if(message) { %>
+        <div class="auth-alert"><%= message %></div>
+        <% } %>
+      <button type="submit">Daftar</button>
+    </form>
+  </div>
+</body>
+</html>

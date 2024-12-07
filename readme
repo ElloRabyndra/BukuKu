@@ -1,0 +1,30 @@
+Selamat Datang Di Project Website BukuKu!
+
+Website ini Dikembangkan Oleh:
+- M.Rabyndra Janitra Binello
+- Abdul Fattah Firdaus
+- Fairus Putra Pratama
+
+Berikut Adalah Langkah - Langkah Untuk Menjalankan Website BukuKu
+
+Penginstalan
+
+- Pada XAMPP buat lah database baru dengan nama BukuKu
+- Import database BukuKu.sql yang ada di folder database
+- Jika import Berhasil pada database anda akan ada 3 tabel (User, Book, Categories)
+- Buka Project di Visual Studio Code
+- Buka terminal (CMD), jalankan perintah "npm install"
+- Project siap dijalankan
+
+Menjalankan Website BukuKu
+
+- Pastikan MySQL dan Apache pada XAMPP sudah aktif
+- Sesuaikan nama user dan password MySQL anda sudah sesuai dengan yang ada di .env
+  Username dan Password yang kami gunakan adalah "root" dan ""
+- Jalankan perintah "npm start" pada terminal (CMD)
+- Buka browser dan akses ke http://localhost:5000
+- Anda akan sampai di halaman login, dan anda dapat melakukan registrasi terlebih dahulu
+- Anda juga dapat login dengan menggunakan user yang telah kami sediakan
+  username: ElloRabyndra
+  password: ello
+- Anda sudah dapat menggunakan website BukuKu!

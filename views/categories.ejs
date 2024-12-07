@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BukuKu - Kategori</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style/categories.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="/home/<%= userId %> %>" class="bukuku-font"></a>
+        <ul>
+          <li><a href="/now-reading/<%= userId %>">Bacaan</a></li>
+          <li><a href="/book/<%= userId %>">Buku</a></li>
+          <li><a href="/categories/<%= userId %>">Kategori</a></li>
+        </ul>
+      </div>
+      <a class="user-profile-icon desktop" href="/profile/<%= userId %>"></a>
+      <a class="user-profile-icon mobile" href="/navbar/<%= userId %>"></a>
+    </nav>
+    <div class="kategori">
+      <div class="kategori-container">
+        <div class="table-main">
+          <div class="table-row-kategori header">Kategori</div>
+          <% if(categories.length==0) { %>
+          <!-- Data Kosong -->
+          <div class="empty-data">
+            <p>Belum Ada Kategori Yang Ditambahkan</p>
+          </div>
+          <% } else { %> <% categories.forEach(category => { %>
+          <div class="table-row-kategori">
+            <div class="table-column-kategori"><%= category.name %></div>
+            <div class="table-column-kategori edit">
+              <a
+                href="/update-categories/<%= userId %>/<%= category.id_categories %>"
+                class="update"
+              ></a>
+              <form
+                action="/delete-categories/<%= userId %>/<%= category.id_categories %>"
+                method="POST"
+              >
+                <button class="delete" type="submit"></button>
+              </form>
+            </div>
+          </div>
+          <% }); %> <% } %>
+          <a href="/add-categories/<%= userId %>" class="add-button">+</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

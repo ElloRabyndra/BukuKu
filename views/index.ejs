@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BukuKu - Login</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style/index.css">
+  </head>
+  <body>
+    <div class="index-container">
+      <div class="index-tittle-container">
+        <div class="bukuku-logo"></div>
+        <h1>Login Untuk Lacak Bacaanmu!</h1>
+        <p>Temukan kembali buku-buku dan catatan bacaanmu bersama Bukuku.</p>
+      </div>
+      <form class="login-form" action="/login" method="POST">
+        <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <% if(message) { %>
+          <div class="auth-alert"><%= message %></div>
+          <% } %>
+        <button type="submit">Masuk</button>
+
+        <a href="/register">Buat Akun Baru</a>
+      </form>
+    </div>
+  </body>
+</html>
