@@ -1,30 +1,40 @@
-Selamat Datang Di Project Website BukuKu!
+# 📚 Selamat Datang di Project Website BukuKu!
 
-Website ini Dikembangkan Oleh:
-- M.Rabyndra Janitra Binello
-- Abdul Fattah Firdaus
-- Fairus Putra Pratama
+Website ini dikembangkan oleh:
+- **M. Rabyndra Janitra Binello**
+- **Abdul Fattah Firdaus**
+- **Fairus Putra Pratama**
 
-Berikut Adalah Langkah - Langkah Untuk Menjalankan Website BukuKu
+##  Panduan Instalasi
 
-Penginstalan
+### 1️⃣ Persiapan Database
+- Buka **XAMPP** dan buat database baru dengan nama **BukuKu**.
+- Import file `BukuKu.sql` yang terdapat di folder `database`.
+- Jika import berhasil, database akan memiliki 3 tabel: **User**, **Book**, dan **Categories**.
 
-- Pada XAMPP buat lah database baru dengan nama BukuKu
-- Import database BukuKu.sql yang ada di folder database
-- Jika import Berhasil pada database anda akan ada 3 tabel (User, Book, Categories)
-- Buka Project di Visual Studio Code
-- Buka terminal (CMD), jalankan perintah "npm install"
-- Project siap dijalankan
+### 2️⃣ Menjalankan Proyek
+- Buka proyek di **Visual Studio Code**.
+- Buka terminal (CMD) dan jalankan perintah berikut untuk menginstal dependensi:
+  ```bash
+  npm install
+  ```
+- Pastikan **MySQL** dan **Apache** pada **XAMPP** sudah aktif.
+- Sesuaikan **username** dan **password** MySQL di file `.env` dengan konfigurasi Anda.
+  - **Default**: `USERNAME=root`, `PASSWORD=` (kosong).
+- Jalankan perintah berikut untuk memulai server:
+  ```bash
+  npm start
+  ```
 
-Menjalankan Website BukuKu
+## 🌐 Mengakses Website BukuKu
+- Buka browser dan akses:
+  ```
+  http://localhost:5000
+  ```
+- Anda akan diarahkan ke halaman **login**.
+- Lakukan **registrasi** atau gunakan akun berikut untuk login:
+  - **Username**: `ElloRabyndra`
+  - **Password**: `ello`
 
-- Pastikan MySQL dan Apache pada XAMPP sudah aktif
-- Sesuaikan nama user dan password MySQL anda sudah sesuai dengan yang ada di .env
-  Username dan Password yang kami gunakan adalah "root" dan ""
-- Jalankan perintah "npm start" pada terminal (CMD)
-- Buka browser dan akses ke http://localhost:5000
-- Anda akan sampai di halaman login, dan anda dapat melakukan registrasi terlebih dahulu
-- Anda juga dapat login dengan menggunakan user yang telah kami sediakan
-  username: ElloRabyndra
-  password: ello
-- Anda sudah dapat menggunakan website BukuKu!
+**Selamat! Anda sudah dapat menggunakan website BukuKu!**
+
