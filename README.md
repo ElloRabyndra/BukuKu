@@ -5,6 +5,18 @@ Website ini dikembangkan oleh:
 - **Abdul Fattah Firdaus**
 - **Fairus Putra Pratama**
 
+## ✨ Fitur-Fitur  
+✅ **Manajemen Buku** – Tambah, edit, hapus, dan lihat daftar buku.  
+✅ **Kategori Buku** – Pengguna dapat membuat dan mengelola kategori buku.  
+✅ **Pencarian Buku** – Cari buku berdasarkan judul atau kategori.  
+✅ **Autentikasi Pengguna** – Registrasi dan login untuk mengakses fitur website.  
+
+
+## 🛠️ Teknologi yang Digunakan  
+🔹 **Frontend** → HTML, Native CSS, EJS  
+🔹 **Backend** → Node.js, Express.js  
+🔹 **Database** → MySQL  
+
 ##  Panduan Instalasi
 
 ### 1️⃣ Persiapan Database
