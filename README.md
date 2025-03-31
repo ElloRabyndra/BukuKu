@@ -1,30 +1,33 @@
 # 📚 Selamat Datang di Project Website BukuKu!
 
 Website ini dikembangkan oleh:
+
 - **M. Rabyndra Janitra Binello**
 - **Abdul Fattah Firdaus**
 - **Fairus Putra Pratama**
 
-## ✨ Fitur-Fitur  
+## ✨ Fitur-Fitur
+
 ✅ **Manajemen Buku** – Tambah, edit, hapus, dan lihat daftar buku.  
 ✅ **Kategori Buku** – Pengguna dapat membuat dan mengelola kategori buku.  
-✅ **Pencarian Buku** – Cari buku berdasarkan judul atau kategori.  
-✅ **Autentikasi Pengguna** – Registrasi dan login untuk mengakses fitur website.  
+✅ **Autentikasi Pengguna** – Registrasi dan login untuk mengakses fitur website.
 
+## 🛠️ Teknologi yang Digunakan
 
-## 🛠️ Teknologi yang Digunakan  
 🔹 **Frontend** → HTML, Native CSS, EJS  
 🔹 **Backend** → Node.js, Express.js  
-🔹 **Database** → MySQL  
+🔹 **Database** → MySQL
 
-##  Panduan Instalasi
+## Panduan Instalasi
 
 ### 1️⃣ Persiapan Database
+
 - Buka **XAMPP** dan buat database baru dengan nama **BukuKu**.
 - Import file `BukuKu.sql` yang terdapat di folder `database`.
 - Jika import berhasil, database akan memiliki 3 tabel: **User**, **Book**, dan **Categories**.
 
 ### 2️⃣ Menjalankan Proyek
+
 - Buka proyek di **Visual Studio Code**.
 - Buka terminal (CMD) dan jalankan perintah berikut untuk menginstal dependensi:
   ```bash
@@ -39,6 +42,7 @@ Website ini dikembangkan oleh:
   ```
 
 ## 🌐 Mengakses Website BukuKu
+
 - Buka browser dan akses:
   ```
   http://localhost:5000
@@ -49,4 +53,3 @@ Website ini dikembangkan oleh:
   - **Password**: `ello`
 
 **Selamat! Anda sudah dapat menggunakan website BukuKu!**
-
