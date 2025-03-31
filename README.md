@@ -1,55 +1,57 @@
-# 📚 Selamat Datang di Project Website BukuKu!
+# 📚 Welcome to the BukuKu Website Project!
 
-Website ini dikembangkan oleh:
+This website is developed by:
 
-- **M. Rabyndra Janitra Binello**
-- **Abdul Fattah Firdaus**
-- **Fairus Putra Pratama**
+- **M. Rabyndra Janitra Binello**  
+- **Abdul Fattah Firdaus**  
+- **Fairus Putra Pratama**  
 
-## ✨ Fitur-Fitur
+## ✨ Features
 
-✅ **Manajemen Buku** – Tambah, edit, hapus, dan lihat daftar buku.  
-✅ **Kategori Buku** – Pengguna dapat membuat dan mengelola kategori buku.  
-✅ **Autentikasi Pengguna** – Registrasi dan login untuk mengakses fitur website.
+✅ **Book Management** – Add, edit, delete, and view the list of books.  
+✅ **Book Categories** – Users can create and manage book categories.  
+✅ **User Authentication** – Register and log in to access website features.  
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Technologies Used
 
 🔹 **Frontend** → HTML, Native CSS, EJS  
 🔹 **Backend** → Node.js, Express.js  
-🔹 **Database** → MySQL
+🔹 **Database** → MySQL  
 
-## Panduan Instalasi
+## Installation Guide
 
-### 1️⃣ Persiapan Database
+### 1️⃣ Database Setup
 
-- Buka **XAMPP** dan buat database baru dengan nama **BukuKu**.
-- Import file `BukuKu.sql` yang terdapat di folder `database`.
-- Jika import berhasil, database akan memiliki 3 tabel: **User**, **Book**, dan **Categories**.
+- Open **XAMPP** and create a new database named **BukuKu**.  
+- Import the `BukuKu.sql` file from the `database` folder.  
+- If the import is successful, the database will contain 3 tables: **User**, **Book**, and **Categories**.  
 
-### 2️⃣ Menjalankan Proyek
+### 2️⃣ Running the Project
 
-- Buka proyek di **Visual Studio Code**.
-- Buka terminal (CMD) dan jalankan perintah berikut untuk menginstal dependensi:
+- Open the project in **Visual Studio Code**.  
+- Open the terminal (CMD) and run the following command to install dependencies:  
   ```bash
   npm install
+
   ```
-- Pastikan **MySQL** dan **Apache** pada **XAMPP** sudah aktif.
-- Sesuaikan **username** dan **password** MySQL di file `.env` dengan konfigurasi Anda.
-  - **Default**: `USERNAME=root`, `PASSWORD=` (kosong).
-- Jalankan perintah berikut untuk memulai server:
+- Ensure that **MySQL** and **Apache** in **XAMPP** are running.
+- Adjust the **MySQL** **username** and **password** in the `.env` file to match your configuration.
+
+  - **Default**: `USERNAME=root`, `PASSWORD=` (empty).
+- Run the following command to start the server:
   ```bash
   npm start
   ```
 
-## 🌐 Mengakses Website BukuKu
+## 🌐 Accessing the BukuKu Website
 
-- Buka browser dan akses:
+- Open your browser and visit:
   ```
   http://localhost:5000
   ```
-- Anda akan diarahkan ke halaman **login**.
-- Lakukan **registrasi** atau gunakan akun berikut untuk login:
+- You will be directed to the **login** page. 
+- **Register** or use the following credentials to log in:
   - **Username**: `ElloRabyndra`
   - **Password**: `ello`
 
-**Selamat! Anda sudah dapat menggunakan website BukuKu!**
+**Congratulations! You can now use the BukuKu website!**
