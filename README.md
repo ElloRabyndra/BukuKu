@@ -6,17 +6,23 @@ This website is developed by:
 - **Abdul Fattah Firdaus**  
 - **Fairus Putra Pratama**  
 
+---
+
 ## ✨ Features
 
 ✅ **Book Management** – Add, edit, delete, and view the list of books.  
 ✅ **Book Categories** – Users can create and manage book categories.  
 ✅ **User Authentication** – Register and log in to access website features.  
 
+---
+
 ## 🛠️ Technologies Used
 
 🔹 **Frontend** → HTML, Native CSS, EJS  
 🔹 **Backend** → Node.js, Express.js  
 🔹 **Database** → MySQL  
+
+---
 
 ## Installation Guide
 
@@ -42,6 +48,7 @@ This website is developed by:
   ```bash
   npm start
   ```
+---
 
 ## 🌐 Accessing the BukuKu Website
 
@@ -55,3 +62,36 @@ This website is developed by:
   - **Password**: `ello`
 
 **Congratulations! You can now use the BukuKu website!**
+
+---
+
+## 📸 Screenshots
+
+Here are some screenshots from the BukuKu website:
+
+### 🏠 Home Page
+![Home Page](screenshot/home.png)
+
+### 📖 Reading List
+![Reading List](screenshot/bacaan.png)
+
+### ✅ Manage Reading Status
+![Manage Reading Status](screenshot/status.png)
+
+### 📚 Book List
+![Book List](screenshot/buku.png)
+
+### ➕ Add Book
+![Add Book](screenshot/tambah_buku.png)
+
+### 🗂️ Category List
+![Category List](screenshot/kategori.png)
+
+### ➕ Add Category
+![Add Category](screenshot/tambah_kategori.png)
+
+### 👤 Profile Page
+![Profile Page](screenshot/profile.png)
+
+### 📊 Dashboard
+![Dashboard](screenshot/dashboard.png)
